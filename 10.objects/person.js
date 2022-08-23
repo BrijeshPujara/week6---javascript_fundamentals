@@ -9,3 +9,5 @@ const person = {
 };
 
 console.log(`${person.address.city} & ${person.hobbies[1]}`);
+
+
