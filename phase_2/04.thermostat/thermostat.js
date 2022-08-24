@@ -8,11 +8,10 @@ class Thermostat {
 
     if (this.savingMode === input) {
       this.savingMode = true;
-      return this.savingMode;
     } else {
       this.savingMode = false;
-      return this.savingMode;
     }
+    return this.savingMode;
   }
 
   getTemperature() {
@@ -26,16 +25,16 @@ class Thermostat {
   }
 
   up() {
-    return (this.temperature += 1);
+    this.temperature += 1;
   }
   down() {
     if (this.temperature > 10) {
-      return (this.temperature -= 1);
+      this.temperature -= 1;
     }
   }
 
   reset() {
-    return (this.temperature = 20);
+    this.temperature = 20;
   }
 }
 
