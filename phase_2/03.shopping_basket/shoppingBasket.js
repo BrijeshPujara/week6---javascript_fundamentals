@@ -7,7 +7,7 @@ class ShoppingBasket {
 
   addItem(candy) {
     const basket = this.basket;
-    return basket.push(candy);
+    basket.push(candy);
   }
 
   getTotalPrice() {

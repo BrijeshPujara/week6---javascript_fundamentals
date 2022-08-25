@@ -15,9 +15,10 @@ describe("Shopping Basket", () => {
 
   it("add one item and returns the total price", () => {
     const basket = new ShoppingBasket();
-    // const mock_candy = new Candy("Mars", 4.99)
+    // const double = { getName: () => "Mars", getPrice: () => 4.99 };
+
     const candy = new Candy("Mars", 4.99);
     basket.addItem(candy);
-    expect(basket.getTotalPrice()).toBe(4.99);
+    expect(basket.getTotalPrice()).toEqual(4.99);
   });
 });
