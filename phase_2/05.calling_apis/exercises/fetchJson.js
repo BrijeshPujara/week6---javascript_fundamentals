@@ -12,3 +12,5 @@ const fetchJson = (url, callback) => {
 fetchJson("https://jsonplaceholder.typicode.com/todos", (response) => {
   console.log(response);
 });
+
+//callback function with no name defined = (response) => {}

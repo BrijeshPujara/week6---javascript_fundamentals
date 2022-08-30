@@ -7,6 +7,9 @@ class ShoppingBasket {
 
   addItem(candy) {
     const basket = this.basket;
+    if (!(candy instanceof Candy)) {
+      throw TypeError()
+    }
     basket.push(candy);
   }
 
@@ -15,7 +18,7 @@ class ShoppingBasket {
     const basket = this.basket;
 
     basket.map((item) => {
-      total += item.price;
+      total += item.getPrice()
     });
     return total;
   }

@@ -16,8 +16,10 @@ class Thermostat {
 
   getTemperature() {
     if (this.savingMode === true && this.temperature > 25) {
+      this.temperature = 25
       return `Power Saving mode is on, temperature capped at: ${25} degrees`;
     } else if (this.savingMode === false && this.temperature > 32) {
+      this.temperature = 32
       return `Power Saving mode is off, maximum temperature is: ${32} degrees`;
     } else {
       return `Current temperature: ${this.temperature}`;
